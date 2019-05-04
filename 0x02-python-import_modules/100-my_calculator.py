@@ -13,8 +13,7 @@ if __name__ == "__main__":
         if argv[2] == operators[i]:
             a = int(argv[1])
             b = int(argv[3])
-            print("{} + {} = {}".format(a, b, functions[i](a, b)))
+            print("{:d} + {:d} = {:d}".format(a, b, functions[i](a, b)))
             exit(0)
     print("Unknown operator. Available operators: +, -, * and /")
     exit(1)
-    
