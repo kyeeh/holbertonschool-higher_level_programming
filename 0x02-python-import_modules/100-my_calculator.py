@@ -15,5 +15,5 @@ if __name__ == "__main__":
             b = int(argv[3])
             print("{:d} {:s} {:d} = {:d}".format(a, argv[2], b, fcs[i](a, b)))
             exit(0)
-    print("Unknown operator. Available ops: +, -, * and /")
+    print("Unknown operator. Available operators: +, -, * and /")
     exit(1)
