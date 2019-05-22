@@ -10,7 +10,7 @@ class Square:
             sq_str += "\n" * self.position[1]
             for i in range(0, self.size):
                 sq_str += (" " * self.position[0]) + ("#" * self.size)
-                if i < self.size - 1: 
+                if i < self.size - 1:
                     sq_str += "\n"
         return (sq_str)
 
