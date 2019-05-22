@@ -6,15 +6,13 @@ class Square:
 
     def __str__(self):
         sq_str = ""
-        if (self.size == 0):
-            print()
-        else:
+        if (self.size > 0):
             sq_str += "\n" * self.position[1]
             for i in range(0, self.size):
                 sq_str += (" " * self.position[0]) + ("#" * self.size)
                 if i < self.size - 1: 
                     sq_str += "\n"
-            return (sq_str)
+        return (sq_str)
 
     def area(self):
         return (self.__size ** 2)
