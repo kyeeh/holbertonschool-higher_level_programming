@@ -8,10 +8,9 @@ class Square:
         sq_str = ""
         if (self.size > 0):
             sq_str += "\n" * self.position[1]
-            for i in range(0, self.size):
-                sq_str += (" " * self.position[0]) + ("#" * self.size)
-                if i < self.size - 1:
-                    sq_str += "\n"
+            for i in range(0, self.size - 1):
+                sq_str += (" " * self.position[0]) + ("#" * self.size) + "\n"
+            sq_str += (" " * self.position[0]) + ("#" * self.size)
         return (sq_str)
 
     def area(self):
