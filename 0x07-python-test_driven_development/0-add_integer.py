@@ -8,7 +8,7 @@ def add_integer(a, b=98):
     """
     Aritmethic addition of two numbers (integers or floats)
     returns a + b
-    """    
+    """
     if (type(a) == float):
         a = int(a)
     elif (type(a) != int):
