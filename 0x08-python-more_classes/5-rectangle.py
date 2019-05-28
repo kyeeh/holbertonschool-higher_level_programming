@@ -1,8 +1,21 @@
-#!/usr/bin/python3
+ #!/usr/bin/python3
 class Rectangle:
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
+
+    def __str__(self):
+        me_as_str = ""
+        if (not(self.__width == 0) or (self.__height == 0)):
+            for i in range(0, self.__height):
+                me_as_str += "#" * self.__width + "\n"
+        return me_as_str
+
+    def __repr__(self):
+        return "Rectangle({:d},{:d})".format(self.width, self.height)
+
+    def __del__(self):
+        print("Bye rectangle...")
 
     @property
     def width(self):
@@ -35,10 +48,3 @@ class Rectangle:
         if ((self.__width == 0) or (self.__height == 0)):
             return 0
         return (self.__width * 2 + self.__height * 2)
-
-    def __str__(self):
-        me_as_str = ""
-        if (not(self.__width == 0) or (self.__height == 0)):
-            for i in range(0, self.__height):
-                me_as_str += "#" * self.__width + "\n"
-        return me_as_str

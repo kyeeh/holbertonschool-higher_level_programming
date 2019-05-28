@@ -37,11 +37,11 @@ class Rectangle:
         return (self.__width * 2 + self.__height * 2)
 
     def __str__(self):
-        str = ""
+        me_as_str = ""
         if (not(self.__width == 0) or (self.__height == 0)):
             for i in range(0, self.__height):
-                str += "#" * self.__width + "\n"
-        return str
+                me_as_str += "#" * self.__width + "\n"
+        return me_as_str
 
     def __repr__(self):
         return "Rectangle({:d},{:d})".format(self.width, self.height)
