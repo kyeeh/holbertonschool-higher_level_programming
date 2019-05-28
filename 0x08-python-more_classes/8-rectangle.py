@@ -1,15 +1,28 @@
  #!/usr/bin/python3
 class Rectangle:
+    number_of_instances = 0
+    print_symbol = "#"
+
+    def bigger_or_equal(rect_1, rect_2):
+        if (type(rect_1) != Rectangle):
+            raise TypeError("rect_1 must be an instance of Rectangle")
+        if (type(rect_2) != Rectangle):
+            raise TypeError("rect_2 must be an instance of Rectangle")
+        if rect_2.area() > rect_1.area():
+            return rect_2
+        return rect_1
+
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
+        Rectangle.number_of_instances += 1
 
     def __str__(self):
         me_as_str = ""
         if (not(self.__width == 0) or (self.__height == 0)):
             for i in range(0, self.__height - 1):
-                me_as_str += "#" * self.__width + "\n"
-            me_as_str += "#" * self.__width
+                me_as_str += str(self.print_symbol) * self.__width + "\n"
+            me_as_str += str(self.print_symbol) * self.__width
         return me_as_str
 
     def __repr__(self):
@@ -17,6 +30,7 @@ class Rectangle:
 
     def __del__(self):
         print("Bye rectangle...")
+        Rectangle.number_of_instances -= 1
 
     @property
     def width(self):

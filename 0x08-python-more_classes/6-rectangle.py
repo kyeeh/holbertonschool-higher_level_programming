@@ -10,8 +10,9 @@ class Rectangle:
     def __str__(self):
         me_as_str = ""
         if (not(self.__width == 0) or (self.__height == 0)):
-            for i in range(0, self.__height):
+            for i in range(0, self.__height - 1):
                 me_as_str += "#" * self.__width + "\n"
+            me_as_str += "#" * self.__width
         return me_as_str
 
     def __repr__(self):
