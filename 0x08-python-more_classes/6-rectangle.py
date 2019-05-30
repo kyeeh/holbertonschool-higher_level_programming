@@ -16,7 +16,7 @@ class Rectangle:
         return me_as_str
 
     def __repr__(self):
-        return "Rectangle({:d},{:d})".format(self.width, self.height)
+        return "Rectangle(" + str(self.width) + ", " + str(self.height) + ")"
 
     def __del__(self):
         print("Bye rectangle...")
