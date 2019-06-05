@@ -1,0 +1,10 @@
+>>> MyList = __import__('1-my_list').MyList
+>>> my_list = MyList()
+>>> my_list.append(-73)
+>>> my_list.append(37)
+>>> my_list.append(0)
+>>> print(my_list)
+[-73, 37, 0]
+
+>>> my_list.print_sorted()
+[-73, 0, 37]
