@@ -18,7 +18,7 @@ class Student:
         """
         dictionary representation of a Student instance with attrs validation
         """
-        if (attrs):
+        if (attrs and len(attrs) > 0):
             new_dict = {}
             my_dictv = vars(self)
             set_dict = set(my_dictv)
