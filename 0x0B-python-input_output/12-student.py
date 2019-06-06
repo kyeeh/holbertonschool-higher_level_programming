@@ -16,6 +16,15 @@ class Student:
 
     def to_json(self, attrs=None):
         """
-        dictionary representation of a Student instance
+        dictionary representation of a Student instance with attrs validation
         """
+        if (attrs):
+            new_dict = {}
+            my_dictv = vars(self)
+            set_dict = set(my_dictv)
+            set_list = set(attrs)
+            keys = list(set_dict & set_list)
+            for key in keys:
+                new_dict[key] = my_dictv[key]
+            return (new_dict)
         return vars(self)
