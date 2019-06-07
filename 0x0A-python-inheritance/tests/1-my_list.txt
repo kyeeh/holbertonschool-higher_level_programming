@@ -13,5 +13,6 @@
 >>> my_list.print_sorted()
 []
 
->>>type(my_list.print_sorted()) == list
+>>> type(my_list.print_sorted()) == list
+[]
 False
