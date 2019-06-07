@@ -48,3 +48,11 @@ TypeError: age must be an integer
 Traceback (most recent call last):
     ...
 TypeError: age must be an integer
+>>> bgi.integer_validator("age", -4)
+Traceback (most recent call last):
+    ...
+ValueError: age must be greater than 0
+>>> bgi.integer_validator("age", "4")
+Traceback (most recent call last):
+    ...
+TypeError: age must be an integer
