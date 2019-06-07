@@ -2,27 +2,49 @@
 >>> bgi = BaseGeometry()
 >>> type(bgi)
 <class '7-base_geometry.BaseGeometry'>
-
 >>> 'integer_validator' in dir(BaseGeometry)
 True
-
 >>> 'area' in dir(BaseGeometry)
 True
-
 >>> bgi.area()
 Traceback (most recent call last):
 Exception: area() is not implemented
-
 >>> bgi.integer_validator()
 Traceback (most recent call last):
 TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
-
 >>> bgi.integer_validator(1)
 Traceback (most recent call last):
 TypeError: integer_validator() missing 1 required positional argument: 'value'
-
 >>> bgi.integer_validator(1, 2, 3)
 Traceback (most recent call last):
 TypeError: integer_validator() takes 3 positional arguments but 4 were given
-
 >>> bgi.integer_validator("name", 73)
+>>> bgi.integer_validator("name", 0)
+Traceback (most recent call last):
+    ...
+ValueError: name must be greater than 0
+>>> bgi.integer_validator("name", -4)
+Traceback (most recent call last):
+    ...
+ValueError: name must be greater than 0
+>>> bgi.integer_validator("name", 4)
+>>> bgi.integer_validator("age", (4,))
+Traceback (most recent call last):
+    ...
+TypeError: age must be an integer
+>>> bgi.integer_validator("age", [3])
+Traceback (most recent call last):
+    ...
+TypeError: age must be an integer
+>>> bgi.integer_validator("age", True)
+Traceback (most recent call last):
+    ...
+TypeError: age must be an integer
+>>> bgi.integer_validator("age", {3, 4})
+Traceback (most recent call last):
+    ...
+TypeError: age must be an integer
+>>> bgi.integer_validator("age", None)
+Traceback (most recent call last):
+    ...
+TypeError: age must be an integer
