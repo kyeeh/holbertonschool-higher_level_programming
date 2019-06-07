@@ -10,8 +10,8 @@
 [-73, 0, 37]
 
 >>> my_list = MyList()
-my_list.print_sorted()
+>>> my_list.print_sorted()
 []
 
-type(my_list.print_sorted()) == list
+>>>type(my_list.print_sorted()) == list
 False
