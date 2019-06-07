@@ -13,6 +13,6 @@
 >>> my_list.print_sorted()
 []
 
->>> type(my_list.print_sorted()) == list
+>>> isinstance(my_list.print_sorted(),list)
 []
 False
