@@ -13,6 +13,8 @@
 >>> my_list.print_sorted()
 []
 
->>> isinstance(my_list.print_sorted(),list)
-[]
-False
+>>> my_list = [-73, 37, 0]
+>>> my_list.print_sorted()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'list' object has no attribute 'print_sorted'
