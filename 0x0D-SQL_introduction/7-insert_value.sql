@@ -2,4 +2,4 @@
 -- (database hbtn_0c_0) in your MySQL server.
 
 INSERT INTO first_table
-VALUES(89, "Holberton School");
+VALUES (89, "Holberton School");
