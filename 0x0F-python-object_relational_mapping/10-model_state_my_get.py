@@ -13,9 +13,9 @@ if __name__ == "__main__":
                            pool_pre_ping=True)
     Session = sessionmaker(bind=engine)
     session = Session()
-    state = session.query(State).first()
+    state = session.query(State).filter(State.name == argv[4]).first()
     if state:
-        print("{}: {}".format(state.id, state.name))
+        print("{}".format(state.id))
     else:
-        print("Nothing")
+        print("Not found")
     session.close()
