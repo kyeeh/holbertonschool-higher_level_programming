@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Prints the first State object from the database 
+Prints the first State object from the database
 """
 from sys import argv
 from model_state import Base, State
