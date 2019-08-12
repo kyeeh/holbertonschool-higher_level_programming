@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Class definition of a State with inherit from Base
+Class definition of a State with inheritage from Base
 """
 
 from sqlalchemy import Column, Integer, String
