@@ -3,9 +3,10 @@
 Class definition of a City with inheritage from Base
 """
 
-from model_state import Base, State
+from relationship_state import Base
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, Integer, String, ForeignKey
+from sqlalchemy.orm import relationship
 
 
 class City(Base):
