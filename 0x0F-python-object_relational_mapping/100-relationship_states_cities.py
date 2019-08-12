@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Prints all City objects from the database
+Creates the State “California” with the City “San Francisco”
 """
 from sys import argv
 from relationship_state import Base, State
