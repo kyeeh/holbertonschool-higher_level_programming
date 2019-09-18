@@ -4,6 +4,6 @@
 if (process.argv.length <= 3) {
   console.log(0);
 } else {
-  let list = process.argv.sort();
+  const list = process.argv.sort();
   console.log(list.reverse()[1]);
 }
