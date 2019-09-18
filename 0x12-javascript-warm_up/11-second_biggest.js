@@ -5,5 +5,5 @@ if (process.argv.length <= 3) {
   console.log(0);
 } else {
   list = process.argv.sort()
-  console.log(list[list.length - 2]);
+  console.log(list.reverse()[1]);
 }
