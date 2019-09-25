@@ -15,5 +15,3 @@ req(url, function (error, response, body) {
     });
   }
 });
-
-
