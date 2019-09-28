@@ -1,1 +1,3 @@
-document.querySelector('header').style.color = '#FF0000';
+$('DIV#update_header').click(function () {
+  $('header').text('New Header!!!');
+});
