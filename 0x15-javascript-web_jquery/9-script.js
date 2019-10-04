@@ -1,1 +1,4 @@
-document.querySelector('header').style.color = '#FF0000';
+$.getJSON('https://fourtonfish.com/hellosalut/?lang=fr',
+  function (data) {
+    $('DIV#hello').append(data.hello);
+  });

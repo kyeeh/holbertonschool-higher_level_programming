@@ -1,1 +1,4 @@
-document.querySelector('header').style.color = '#FF0000';
+$.getJSON('https://swapi.co/api/people/5/?format=json',
+  function (data) {
+    $('DIV#character').text(data.name);
+  });
